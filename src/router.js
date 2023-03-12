@@ -10,6 +10,7 @@ const routes = [
     component: ncHome
   },
 ]
+
 export default new VueRouter({
   routes
 })
