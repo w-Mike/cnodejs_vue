@@ -1,3 +1,24 @@
+
+
+
+## 关于该项目的一些疑问：
+1. 描述：
+    前提： eventBus中存储时间的Object:
+        "event1"  --> [func1, func2...]
+        "event2"  --> [func1, func2...]
+        ...
+        eventBus.on("event1", func(){}) 就是给event1事件的数组中添加一个回调函数
+        eventBus.trigger("event1", args) 就是触发运行event1事件队列中的所有函数，以args为参数。
+    问题： eventBus.trigger 执行函数的逻辑是 func.apply(null, args)  这样执行func函数时候的this是null吗？
+          但是从运行结果来看，func函数中的this是以evnetBus.on() 挂载事件时上下文中的this为准的。
+
+
+
+
+
+
+
+---
 # node-community
 
 ## Project setup

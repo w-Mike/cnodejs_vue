@@ -13,9 +13,11 @@
     </div>
     <div>
       注册时间：
-      {{$moment(user.create_at, 'YYYY-MM-DD')
-      .startOf('day')
-      .fromNow()}}
+      {{
+        $moment(user.create_at, 'YYYY-MM-DD')
+        .startOf('day')
+        .fromNow()
+      }}
     </div>
   </div>
 </template>
@@ -34,7 +36,7 @@ export default {
   name: "ProfilePanel",
   /**
    * 通过在这里定义变量，可以让父组件通过这些变量向此组件传递数据
-   * P.S. https://cn.vuejs.org/v2/guide/components.html#%E9%80%9A%E8%BF%87-Prop-%E5%90%91%E5%AD%90%E7%BB%84%E4%BB%B6%E4%BC%A0%E9%80%92%E6%95%B0%E6%8D%AE
+   * P.S. https://cn.vuejs.org/v2/guide/componenthtml#%E9%80%9A%E8%BF%87-Prop-%E5%90%91%E5%AD%90%E7%BB%84%E4%BB%B6%E4%BC%A0%E9%80%92%E6%95%B0%E6%8D%AE
    */
   props: ["loginname"],
   /**
@@ -89,6 +91,7 @@ export default {
   color: black;
   padding: 20px;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  
   > a {
     display: flex;
     align-items: center;

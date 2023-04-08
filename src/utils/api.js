@@ -8,7 +8,15 @@ const reqTopics = params => {
   })
 }
 
+// 
 
-// 获取
 
-export { reqTopics }
+// 获取 用户详情
+const reqUserByName = loginName => {
+  return request({
+    url: `/user/${loginName} `,
+    method: 'get'
+  })
+}
+
+export { reqTopics, reqUserByName}

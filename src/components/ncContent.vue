@@ -3,7 +3,7 @@
     <div v-for="item in list" :key="item.id">
       <div class="topic">
         <!-- 头像 -->
-        <router-link to="{}">
+        <router-link :to="{name:'user', params: { id: item.author.loginname } }">
           <img :src="item.author['avatar_url']" alt="" />
         </router-link>
         <!-- 评论数/浏览数 -->
